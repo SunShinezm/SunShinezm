@@ -7,6 +7,7 @@ import java.io.*;
  * 字符流          字符流只能处理纯文本文件，不能处理图片音频等
  * 缓冲字节流
  * 缓冲字符流 的效率
+ * 缓冲字节>字节>缓冲字符>字符
  */
 public class Test {
     public static void main(String[] args) {

@@ -14,12 +14,28 @@ import java.io.IOException;
  */
 public class Demo01BufferReader {
     public static void main(String[] args) {
-        try {
+        /*try {
             BufferedReader brd = new BufferedReader(new FileReader("a.txt"));
             int len = 0;
             char[] chars = new char[1024];
             while ((len = brd.read(chars)) != -1) {
                 System.out.println(new String(chars, 0, len));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        readLine();
+    }
+
+
+    public static void readLine() {
+        try {
+            BufferedReader brd = new BufferedReader(new FileReader("b.txt"));
+            String str = null;
+            while ((str = brd.readLine()) != null) {
+                System.out.println(str);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

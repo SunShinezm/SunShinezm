@@ -91,7 +91,9 @@ public class Demo03Filter {
             });
             if (fileList != null && fileList.length > 0) {
                 for (File arg : fileList) {
-                    list.add(arg);
+                    if (arg.isFile()) {
+                        list.add(arg);
+                    }
                     getFileList(arg, list);
                 }
             }
